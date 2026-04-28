@@ -47,19 +47,19 @@ export default function Home() {
               <span className="text-emerald-700">Oración</span>
             </h1>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              La aplicación oficial <strong>SOUC 2026</strong>. Una herramienta pastoral diseñada por la Conferencia del Episcopado Mexicano para acompañar a los fieles en el camino hacia la unidad.
+              La aplicación oficial <strong>CEDIC SOUC 2026 | México</strong>. Una herramienta pastoral diseñada por la Conferencia del Episcopado Mexicano para acompañar a los fieles en el camino hacia la unidad.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#download" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 shadow-lg hover:shadow-xl hover:-translate-y-1">
-                <Download className="mr-2 h-5 w-5" /> Descargar APK
+              <a href="#" className="inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 shadow-lg hover:-translate-y-1">
+                <Smartphone className="mr-2 h-5 w-5" /> Consíguelo en el App Store
               </a>
-              <a href="#features" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 transition-all bg-white border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300">
-                Conocer más
+              <a href="#" className="inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-slate-900 transition-all bg-white border border-slate-200 rounded-xl hover:bg-slate-50 shadow-sm hover:-translate-y-1">
+                <Download className="mr-2 h-5 w-5" /> Disponible en Google Play
               </a>
             </div>
             <p className="mt-6 text-xs text-slate-400">
-              Disponible para dispositivos Android &bull; Versión 1.0.0
+              Disponible para iOS y Android &bull; Versión 1.0.0
             </p>
           </div>
 
@@ -265,11 +265,27 @@ export default function Home() {
                   <Smartphone className="h-5 w-5 text-emerald-400" /> Abrir
                 </h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Una vez completada la instalación, abre la app SOUC 2026 y disfruta de todo el contenido.
+                  Una vez completada la instalación, abre la app CEDIC SOUC 2026 | México y disfruta de todo el contenido.
                 </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Support / Contact Section */}
+      <section id="soporte" className="py-24 px-6 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mb-6">
+            <Heart className="h-8 w-8" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 font-serif">Soporte y Contacto</h2>
+          <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+            ¿Necesitas ayuda con la app? Contáctanos y te asistiremos. Estamos aquí para asegurarnos de que tu experiencia sea la mejor.
+          </p>
+          <a href="mailto:soporte@cem.org.mx" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-emerald-700 transition-all bg-emerald-100/50 border border-emerald-200 rounded-xl hover:bg-emerald-100 hover:shadow-sm">
+            <Globe className="mr-2 h-5 w-5" /> soporte@cem.org.mx
+          </a>
         </div>
       </section>
 
@@ -279,28 +295,18 @@ export default function Home() {
           <span className="inline-block p-4 rounded-2xl bg-emerald-50 text-emerald-600 mb-6">
             <Smartphone className="h-8 w-8" />
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 font-serif">Descarga SOUC 2026</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 font-serif">Descarga CEDIC SOUC 2026 | México</h2>
           <p className="text-lg text-slate-600 mb-10">
-            Lleva contigo todas las herramientas para vivir la unidad de los cristianos. <br className="hidden md:block" />Disponible para Android.
+            Lleva contigo todas las herramientas para vivir la unidad de los cristianos. <br className="hidden md:block" />Disponible para iOS y Android.
           </p>
 
-          <div className="bg-amber-50 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto mb-10 border border-amber-100 text-left flex gap-4 md:items-center">
-            <div className="shrink-0 bg-white p-2 rounded-full shadow-sm text-amber-500">
-              <AlertTriangle className="h-6 w-6" />
-            </div>
-            <div>
-              <h4 className="font-bold text-amber-900 mb-1">Nota de Instalación Importante</h4>
-              <p className="text-sm text-amber-800 leading-snug">
-                Al ser una app institucional interna, deberás autorizar la instalación desde fuentes externas en tu configuración de Android ("Confiar en esta fuente").
-              </p>
-            </div>
-          </div>
-
-          <div className="inline-flex flex-col gap-4 w-full sm:w-auto">
-            <a href="https://drive.google.com/drive/folders/1hQjdJdUKZvpM5ehIL5MwrgEShEfK-Ejl?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all bg-emerald-700 rounded-xl hover:bg-emerald-800 shadow-xl shadow-emerald-200">
-              <Download className="mr-2 h-6 w-6" /> Descargar APK Ahora
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
+            <a href="#" className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-lg font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 shadow-xl hover:-translate-y-1">
+              <Smartphone className="mr-3 h-6 w-6" /> Consíguelo en el App Store
             </a>
-            <span className="text-slate-400 text-sm">Tamaño: 25 MB &bull; Actualizado: Ene 2026</span>
+            <a href="#" className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-lg font-bold text-slate-900 transition-all bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 shadow-sm hover:-translate-y-1">
+              <Download className="mr-3 h-6 w-6" /> Disponible en Google Play
+            </a>
           </div>
         </div>
       </section>
@@ -317,7 +323,7 @@ export default function Home() {
               Comisión Episcopal para la Pastoral de la Comunicación. Trabajando por la evangelización en el mundo digital.
             </p>
             <div className="text-sm text-slate-500">
-              &copy; 2026 Conferencia del Episcopado Mexicano.
+              &copy; 2026 CEDIC SOUC 2026 | México. Todos los derechos reservados.
             </div>
           </div>
 
@@ -333,9 +339,9 @@ export default function Home() {
           <div>
             <h4 className="text-white font-bold mb-6">Legales</h4>
             <ul className="space-y-4 text-sm">
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Aviso de Privacidad</a></li>
+              <li><Link href="/privacidad" className="hover:text-emerald-400 transition-colors">Política de Privacidad</Link></li>
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Términos y Condiciones</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Soporte Técnico</a></li>
+              <li><a href="#soporte" className="hover:text-emerald-400 transition-colors">Soporte Técnico</a></li>
             </ul>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SOUC 2026 - Octavario por la Unidad de los Cristianos",
+  title: "CEDIC SOUC 2026 | México",
   description: "Descarga la APP oficial CEDIC SOUC 2026. Reflexiones, misas audio y subsidios para el Octavario por la unidad de los cristianos (18-25 Enero).",
 };
 
