@@ -66,19 +66,19 @@ export default function Home() {
           </div>
 
           {/* Visual - Phone Mockup */}
-          <div className="relative mx-auto lg:ml-auto w-72 md:w-80 lg:w-96 perspective-1000">
-            <div className="relative rounded-[2.5rem] overflow-hidden border-8 border-slate-900 bg-slate-900 shadow-2xl skew-y-0 lg:-skew-y-0 transform transition-transform hover:scale-[1.02] duration-500">
+          <div className="relative mx-auto lg:ml-auto w-64 sm:w-72 md:w-80 lg:w-96 perspective-1000">
+            <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border-[6px] sm:border-8 border-slate-900 bg-slate-900 shadow-2xl transform transition-transform hover:scale-[1.02] duration-500">
               {/* Notch / Camera */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-slate-900 rounded-b-xl z-20"></div>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 max-w-[160px] h-5 sm:h-7 bg-slate-900 rounded-b-xl sm:rounded-b-2xl z-20"></div>
               {/* Screen Content */}
-              <div className="relative bg-white h-[782px] w-full overflow-hidden">
+              <div className="relative bg-white aspect-[9/19.5] w-full overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/screenshots/inicio.jpeg" alt="App Home Screen" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Decorative Elements around phone */}
-            <div className="absolute top-1/2 -right-12 -translate-y-1/2 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-emerald-600/10 rounded-full blur-xl"></div>
+            <div className="absolute top-1/2 -right-6 sm:-right-12 -translate-y-1/2 w-20 sm:w-24 h-20 sm:h-24 bg-yellow-400/20 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute -bottom-6 -left-6 w-24 sm:w-32 h-24 sm:h-32 bg-emerald-600/10 rounded-full blur-xl"></div>
           </div>
         </div>
       </section>
@@ -214,7 +214,7 @@ export default function Home() {
       </section>
 
 
-      {/* Support / Contact Section */}
+      {/* Support / Contact Section
       <section id="soporte" className="py-24 px-6 bg-slate-50 border-t border-slate-100">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mb-6">
@@ -228,7 +228,7 @@ export default function Home() {
             <Globe className="mr-2 h-5 w-5" /> soporte@cem.org.mx
           </a>
         </div>
-      </section>
+      </section> */}
 
       {/* Download / Final CTA */}
       <section id="download" className="py-24 px-6 bg-white border-t border-slate-100">
