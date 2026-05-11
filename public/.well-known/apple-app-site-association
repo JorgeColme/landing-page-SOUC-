@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "REEMPLAZA_CON_TU_TEAM_ID.com.jcolmenero.cedicapp",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Montserrat } from "next/font/google";
 import { Download, Smartphone, BookOpen, Headphones, Scroll, Share2, Globe, Heart, Star, ChevronRight, Quote, AlertTriangle } from "lucide-react";
+
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["800"] });
 
 export default function Home() {
   return (
@@ -11,9 +14,8 @@ export default function Home() {
           <div className="flex items-center gap-6">
             {/* Logos Wrapper */}
             <div className="flex items-center gap-4">
-              <Link href="https://cem.org.mx" target="_blank" className="hover:opacity-90 transition-opacity">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo-cem.jpg" alt="CEM" className="h-10 w-auto" />
+              <Link href="https://cem.org.mx" target="_blank" className="hover:opacity-90 transition-opacity flex items-center">
+                <span className={`${montserrat.className} text-[#00503B] tracking-wide text-2xl`}>CEM</span>
               </Link>
               <div className="h-8 w-px bg-slate-200 hidden sm:block"></div>
               <Link href="https://cedic.cem.org.mx" target="_blank" className="hover:opacity-90 transition-opacity flex items-center gap-3">
@@ -51,10 +53,10 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#" className="inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 shadow-lg hover:-translate-y-1">
+              <a href="https://apps.apple.com/us/app/cedic-souc-2026-m%C3%A9xico/id6762645471" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 shadow-lg hover:-translate-y-1">
                 <Smartphone className="mr-2 h-5 w-5" /> Consíguelo en el App Store
               </a>
-              <a href="#" className="inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-slate-900 transition-all bg-white border border-slate-200 rounded-xl hover:bg-slate-50 shadow-sm hover:-translate-y-1">
+              <a href="https://play.google.com/store/apps/details?id=com.jcolmenero.cedicapp&hl=es" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-slate-900 transition-all bg-white border border-slate-200 rounded-xl hover:bg-slate-50 shadow-sm hover:-translate-y-1">
                 <Download className="mr-2 h-5 w-5" /> Disponible en Google Play
               </a>
             </div>
@@ -69,9 +71,9 @@ export default function Home() {
               {/* Notch / Camera */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-slate-900 rounded-b-xl z-20"></div>
               {/* Screen Content */}
-              <div className="relative bg-white h-[600px] w-full overflow-hidden">
+              <div className="relative bg-white h-[782px] w-full overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/screenshots/home.jpg" alt="App Home Screen" className="w-full h-full object-cover" />
+                <img src="/screenshots/inicio.jpeg" alt="App Home Screen" className="w-full h-full object-cover" />
               </div>
             </div>
             {/* Decorative Elements around phone */}
@@ -146,11 +148,11 @@ export default function Home() {
 
           {/* Carousel */}
           <div className="flex overflow-x-auto pb-12 gap-8 snap-x snap-mandatory scrollbar-hide">
-            {['home', 'liturgy', 'resources', 'intentions'].map((img, idx) => (
+            {['splash.jpg', 'inicio.jpeg', 'souc.jpeg', 'monseñor.jpeg', 'noticias-cedic.jpeg', 'liturgia-dia.jpeg'].map((img, idx) => (
               <div key={idx} className="shrink-0 w-72 snap-center group">
                 <div className="rounded-[2rem] overflow-hidden border-4 border-slate-800 shadow-2xl aspect-[9/19.5] relative bg-slate-800">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={`/screenshots/${img}.jpg`} alt={`Screenshot ${img}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={`/screenshots/${img}`} alt={`Screenshot ${img.split('.')[0]}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
                 </div>
@@ -211,67 +213,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Installation Guide Step-by-Step */}
-      <section className="py-20 px-6 bg-slate-900 text-white relative overflow-hidden">
-        {/* Decorative background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-emerald-900/20 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-slate-800 border border-slate-700 text-emerald-400 text-xs font-bold tracking-wide uppercase mb-4">
-              Guía Rápida
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Instalación en 3 Pasos</h2>
-            <p className="text-slate-400 max-w-xl mx-auto">Sigue estas instrucciones para instalar la aplicación de forma segura en tu dispositivo Android.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Step 1 */}
-            <div className="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 relative group">
-              <div className="absolute -top-6 left-8 w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center font-bold text-xl border-4 border-slate-900">1</div>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                  <Download className="h-5 w-5 text-emerald-400" /> Descargar
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Haz clic en el botón "Descargar APK" para guardar el archivo oficial en tu dispositivo.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 2 - Critical */}
-            <div className="bg-gradient-to-br from-amber-900/20 to-slate-800/50 p-8 rounded-3xl border border-amber-500/30 relative group shadow-[0_0_30px_-10px_rgba(245,158,11,0.15)]">
-              <div className="absolute -top-6 left-8 w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center font-bold text-xl border-4 border-slate-900 shadow-lg text-white">2</div>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-3 flex items-center gap-2 text-amber-400">
-                  <AlertTriangle className="h-5 w-5" /> Permitir
-                </h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                  Tu teléfono podría bloquear la instalación. Es necesario ir a <strong>Configuración</strong> y activar <strong>"Confiar en esta fuente"</strong>.
-                </p>
-                <div className="bg-black/40 p-3 rounded-lg border border-amber-500/20">
-                  <p className="text-xs text-amber-200/80 italic text-center">
-                    "Esto es normal para apps institucionales fuera de la Play Store."
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 relative group">
-              <div className="absolute -top-6 left-8 w-12 h-12 bg-emerald-700 rounded-xl flex items-center justify-center font-bold text-xl border-4 border-slate-900">3</div>
-              <div className="mt-6">
-                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                  <Smartphone className="h-5 w-5 text-emerald-400" /> Abrir
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Una vez completada la instalación, abre la app CEDIC SOUC 2026 | México y disfruta de todo el contenido.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Support / Contact Section */}
       <section id="soporte" className="py-24 px-6 bg-slate-50 border-t border-slate-100">
@@ -301,10 +242,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
-            <a href="#" className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-lg font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 shadow-xl hover:-translate-y-1">
+            <a href="https://apps.apple.com/us/app/cedic-souc-2026-m%C3%A9xico/id6762645471" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-lg font-bold text-white transition-all bg-slate-900 rounded-xl hover:bg-slate-800 shadow-xl hover:-translate-y-1">
               <Smartphone className="mr-3 h-6 w-6" /> Consíguelo en el App Store
             </a>
-            <a href="#" className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-lg font-bold text-slate-900 transition-all bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 shadow-sm hover:-translate-y-1">
+            <a href="https://play.google.com/store/apps/details?id=com.jcolmenero.cedicapp&hl=es" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 text-lg font-bold text-slate-900 transition-all bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 shadow-sm hover:-translate-y-1">
               <Download className="mr-3 h-6 w-6" /> Disponible en Google Play
             </a>
           </div>
